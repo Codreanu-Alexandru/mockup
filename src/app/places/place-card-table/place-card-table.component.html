@@ -1,0 +1,11 @@
+<div class="buttons">
+    <button class="arrow-button left" (click)="loadPrevious()" [disabled]="currentPage === 1"></button>
+    <button class="arrow-button right" (click)="loadNext()" [disabled]="currentPage * 6 > places.length"></button>
+</div>
+<div class="title">
+    <h1>Most Popular</h1>
+    <hr>
+</div>
+<div class="place-container">
+    <app-place-card *ngFor="let place of getItems()" [place]="place"></app-place-card>
+</div>

@@ -1,0 +1,8 @@
+<div class="search-bar">
+    <input class="bar" type="text" [(ngModel)]="searchTerm" (keyup)="search()" placeholder=" Select your place">
+    <div *ngIf="searchResults">
+        <div *ngFor="let item of searchResults">
+            <button class="search-button" (click)="onSearchPlace(item)">{{ item.title }}</button>
+        </div>
+    </div>
+</div>

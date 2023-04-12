@@ -1,0 +1,23 @@
+<div class="title-card" *ngIf="mainPlaceCard!=null">
+    <div class="card">
+        <div class="image-container">
+            <img class="image" src={{mainPlaceCard.image}}>
+        </div>
+        <div class="text-area">
+            <div style="font-size: 20px;">DISCOVER THE COLORFUL WORLD</div>
+            <div class="title">{{mainPlaceCard.title}}</div>
+            <hr>
+            <div class="description">{{mainPlaceCard.description}}</div>
+        </div>
+        <button class="discover-button" routerLink="/places">DESCOVER NOW</button>
+    </div>
+
+</div>
+<div class="section-text">Search & Book all of your destinations</div>
+<app-search (placeFromSearchBar)="onPlaceSelected($event)"></app-search>
+
+<div class=" section-text" style="font-size: 32px;">
+    OUR SERVICES
+    <hr style="width:33%; margin-left: 33%;">
+</div>
+<app-article class="articles"></app-article>
