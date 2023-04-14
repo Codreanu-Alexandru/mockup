@@ -44,7 +44,7 @@ export class PlacesGetter {
         {
             image: 'assets/A.jpg',
             title: 'Some Valley (again)',
-            description: this.desc
+            description: this.desc.repeat(6)
         },
     ];
     placesSubject = new Subject<Place[]>();
